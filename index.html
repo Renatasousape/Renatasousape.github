@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de Consultas</title>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h2>Registro de Consultas</h2>
+        <form class="registration-form" action="registro_consulta.php" method="post">
+            <label for="medico_id">ID do Médico:</label>
+            <input type="text" id="medico_id" name="medico_id" required><br>
+
+            <label for="data">Data da Consulta:</label>
+            <input type="date" id="data" name="data" required><br>
+
+            <label for="hora_inicio">Horário de Início:</label>
+            <input type="time" id="hora_inicio" name="hora_inicio" required><br>
+
+            <label for="hora_fim">Horário de Término:</label>
+            <input type="time" id="hora_fim" name="hora_fim" required><br>
+
+            <label for="duracao">Duração (em minutos):</label>
+            <input type="number" id="duracao" name="duracao" required><br>
+
+            <button type="submit">Registrar Consulta</button>
+
+        </form>
+
+        <div class="status-message" id="status-message"></div>
+    </div>
+    <script>
+        document.getElementById("consultation-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Lógica de validação e registro da consulta aqui
+            var statusMessage = document.getElementById("status-message");
+            // Simulação de feedback (substitua por lógica real)
+            statusMessage.textContent = "Consulta registrada com sucesso!";
+            statusMessage.style.color = "#4caf50";
+        });
+    </script>
+</body>
+
+</html>
